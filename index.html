@@ -504,6 +504,27 @@
             .countdown-number { font-size: 2rem; }
             .countdown-item { min-width: 70px; }
         }
+	/* Styl domyślny (komputer) */
+.countdown-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem; /* Nieco większy na desktopie wygląda dobrze */
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    white-space: nowrap; /* Zapobiega łamaniu linii */
+}
+
+/* Styl dla telefonu (Media Queries) */
+@media (max-width: 768px) {
+    .countdown-title {
+        font-size: 1.8rem; /* Mniejszy rozmiar, by zmieścił się w jednej linii */
+    }
+}
+
+@media (max-width: 400px) {
+    .countdown-title {
+        font-size: 1.5rem; /* Jeszcze mniejszy dla bardzo małych ekranów */
+    }
+}
     </style>
 </head>
 <body>
@@ -535,7 +556,7 @@
 
 <section class="countdown-section">
         <div class="countdown-container">
-            <h3 style="font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px;">Do naszego ślubu pozostało...</h3>
+          <h3 class="countdown-title">Do naszego ślubu pozostało...</h3>
             <div id="countdown" class="countdown">
                 <div class="countdown-item">
                     <span id="days" class="countdown-number">00</span>
@@ -852,8 +873,8 @@
 
     <footer>
         <h2 style="font-size: 3rem; margin-bottom: 10px;">Anna & Jan</h2>
-        <p>15.08.2026</p>
-        <p style="margin-top: 40px; font-size: 0.7rem; opacity: 0.4; letter-spacing: 2px;">© TWOJA MARKA - PROJEKTY STRON ŚLUBNYCH</p>
+        <p>Nie możemy sie doczekać!</p>
+        <p style="margin-top: 40px; font-size: 0.7rem; opacity: 0.4; letter-spacing: 2px;">© Strona Ślubna 2026</p>
     </footer>
 
     <script>
@@ -924,4 +945,5 @@ const guests = {
 
     </script>
 </body>
+
 </html>
